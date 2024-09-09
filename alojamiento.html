@@ -72,7 +72,7 @@
         }
 
         .section {
-            max-width: 1000px;
+            max-width: 1200px;
             margin: 120px auto; /* Ajustamos el margen superior para compensar la barra fija */
             padding: 20px;
             text-align: center;
@@ -89,19 +89,20 @@
         }
 
         .gallery {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); /* Mostrar 3 imágenes por fila en pantallas grandes */
             gap: 20px;
             margin-top: 40px;
         }
 
+        /* Ajuste de tamaño de imágenes */
         .gallery img {
-            width: 300px;
-            height: 200px;
+            width: 100%;
+            height: 300px; /* Altura fija para mantener consistencia */
             object-fit: cover;
             border-radius: 10px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
         }
 
         .gallery div {
@@ -130,15 +131,64 @@
             text-decoration: none;
         }
 
+        /* Ajuste para pantallas medianas */
+        @media (max-width: 1024px) {
+            .gallery {
+                grid-template-columns: repeat(2, 1fr); /* Mostrar 2 imágenes por fila */
+            }
+        }
+
+        /* Ajuste para pantallas móviles */
         @media (max-width: 768px) {
             nav a {
                 font-size: 16px;
                 margin: 0 10px;
             }
+
             .section p {
                 font-size: 18px;
             }
+
+            /* Mostrar 1 imagen por fila en móviles */
+            .gallery {
+                grid-template-columns: 1fr;
+            }
         }
+
+        /* Estilos para el modal */
+        .modal {
+            display: none; /* El modal está oculto por defecto */
+            position: fixed;
+            z-index: 1001;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.8); /* Fondo oscuro */
+        }
+
+        .modal-content {
+            margin: 10% auto;
+            display: block;
+            width: 80%;
+            max-width: 900px; /* Limitar el tamaño máximo */
+        }
+
+        .modal-content img {
+            width: 100%;
+        }
+
+        .close {
+            position: absolute;
+            top: 20px;
+            right: 35px;
+            color: white;
+            font-size: 40px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
     </style>
 </head>
 <body>
@@ -159,46 +209,66 @@
         <p>En La Colmena ofrecemos habitaciones acogedoras decoradas con un estilo rústico y moderno.</p>
         <div class="gallery">
             <div>
-                <img src="https://raw.githubusercontent.com/elias369369/elias369369.github.io/main/A%20Habitacion%201.jpg" alt="Habitación 1">
+                <img src="https://raw.githubusercontent.com/elias369369/elias369369.github.io/main/A%20Habitacion%201.jpg" alt="Habitación 1" onclick="openModal(this)">
                 <p>Habitación 1</p>
             </div>
             <div>
-                <img src="https://raw.githubusercontent.com/elias369369/elias369369.github.io/main/A%20Habitacion%202.JPG" alt="Habitación 2">
+                <img src="https://raw.githubusercontent.com/elias369369/elias369369.github.io/main/A%20Habitacion%202.JPG" alt="Habitación 2" onclick="openModal(this)">
                 <p>Habitación 2</p>
             </div>
             <div>
-                <img src="https://github.com/elias369369/elias369369.github.io/blob/main/A%20Habitacion%203.JPG?raw=true" alt="Habitación 3">
+                <img src="https://github.com/elias369369/elias369369.github.io/blob/main/A%20Habitacion%203.JPG?raw=true" alt="Habitación 3" onclick="openModal(this)">
                 <p>Habitación 3</p>
             </div>
             <div>
-                <img src="https://raw.githubusercontent.com/elias369369/elias369369.github.io/main/A%20Habitacion%204.JPG" alt="Habitación 4">
+                <img src="https://raw.githubusercontent.com/elias369369/elias369369.github.io/main/A%20Habitacion%204.JPG" alt="Habitación 4" onclick="openModal(this)">
                 <p>Habitación 4</p>
             </div>
             <div>
-                <img src="https://github.com/elias369369/elias369369.github.io/blob/main/A%20Habitacion%205.JPG?raw=true" alt="Habitación 5">
+                <img src="https://github.com/elias369369/elias369369.github.io/blob/main/A%20Habitacion%205.JPG?raw=true" alt="Habitación 5" onclick="openModal(this)">
                 <p>Habitación 5</p>
             </div>
             <div>
-                <img src="https://raw.githubusercontent.com/elias369369/elias369369.github.io/main/A%20Habitacion%20Ba%C3%B1o%201.JPG" alt="Baño 1">
+                <img src="https://raw.githubusercontent.com/elias369369/elias369369.github.io/main/A%20Habitacion%20Ba%C3%B1o%201.JPG" alt="Baño 1" onclick="openModal(this)">
                 <p>Baño 1</p>
             </div>
             <div>
-                <img src="https://raw.githubusercontent.com/elias369369/elias369369.github.io/main/A%20Habitacion%20Ba%C3%B1o%202.JPG" alt="Baño 2">
+                <img src="https://raw.githubusercontent.com/elias369369/elias369369.github.io/main/A%20Habitacion%20Ba%C3%B1o%202.JPG" alt="Baño 2" onclick="openModal(this)">
                 <p>Baño 2</p>
             </div>
             <div>
-                <img src="https://raw.githubusercontent.com/elias369369/elias369369.github.io/main/A%20Habitacion%20Cocina.JPG" alt="Cocina">
+                <img src="https://raw.githubusercontent.com/elias369369/elias369369.github.io/main/A%20Habitacion%20Cocina.JPG" alt="Cocina" onclick="openModal(this)">
                 <p>Cocina</p>
             </div>
             <div>
-                <img src="https://github.com/elias369369/elias369369.github.io/blob/main/A%20Habitacion%20Comedor.JPG?raw=true" alt="Comedor">
+                <img src="https://github.com/elias369369/elias369369.github.io/blob/main/A%20Habitacion%20Comedor.JPG?raw=true" alt="Comedor" onclick="openModal(this)">
                 <p>Comedor</p>
             </div>
         </div>
     </div>
 
+    <!-- Modal -->
+    <div id="myModal" class="modal" onclick="closeModal()">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="modalImage">
+    </div>
+
     <footer>
         <p>© 2024 La Colmena - Todos los derechos reservados</p>
     </footer>
+
+    <script>
+        function openModal(image) {
+            var modal = document.getElementById("myModal");
+            var modalImg = document.getElementById("modalImage");
+            modal.style.display = "block";
+            modalImg.src = image.src;
+        }
+
+        function closeModal() {
+            var modal = document.getElementById("myModal");
+            modal.style.display = "none";
+        }
+    </script>
 </body>
 </html>
