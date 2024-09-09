@@ -75,12 +75,14 @@
             color: var(--hover-color); /* Efecto de hover sobre los enlaces */
         }
 
-        /* Sección con imagen de fondo */
+        /* Sección con imagen de fondo con efecto parallax */
         header {
             height: var(--header-height);
             background-image: url('https://github.com/elias369369/elias369369.github.io/blob/main/Tragavivos%201.JPG?raw=true');
+            background-attachment: fixed; /* Clave para el efecto parallax */
+            background-position: center;
+            background-repeat: no-repeat;
             background-size: cover;
-            background-position: center; /* Imagen restaurada a la posición original */
             display: flex;
             justify-content: center;
             align-items: center;
@@ -98,6 +100,16 @@
         .section h2 {
             font-size: 30px;
             margin-bottom: 10px;
+        }
+
+        /* Estilos del texto agradable */
+        .intro-text {
+            font-family: 'Lora', serif; /* Mantenemos la tipografía Lora */
+            font-size: 24px;
+            line-height: 1.8;
+            margin: 40px 20px;
+            text-align: center;
+            color: #444; /* Un tono gris suave */
         }
 
         #calendar {
@@ -198,6 +210,7 @@
             /* Reducir el tamaño del header en móviles */
             header {
                 height: 50vh; /* Altura más pequeña para móviles */
+                background-attachment: scroll; /* Deshabilitar parallax en móviles */
             }
 
             /* Ajuste de calendario */
@@ -206,25 +219,24 @@
                 padding: 5px;
             }
 
-            /* Ajuste de la disposición del menú */
-            nav {
-                flex-direction: row;
+            nav .logo img {
+                height: 60px; /* Reducimos el tamaño del logo en móviles */
             }
 
-            nav .logo {
-                margin-right: auto;
-            }
-
-            nav .nav-links {
-                justify-content: center;
+            nav .nav-links a {
+                font-size: 14px; /* Reducimos el tamaño del texto en móviles */
             }
         }
 
         /* Para pantallas aún más pequeñas (teléfonos muy pequeños) */
         @media (max-width: 480px) {
             nav a {
-                font-size: 14px;
+                font-size: 12px; /* Aún más pequeño en pantallas muy pequeñas */
                 margin: 0 5px;
+            }
+
+            nav .logo img {
+                height: 50px; /* Logo más pequeño aún */
             }
 
             .section h2 {
@@ -237,6 +249,12 @@
 
             header {
                 height: 40vh;
+                background-attachment: scroll; /* Deshabilitar parallax en pantallas pequeñas */
+            }
+
+            .intro-text {
+                font-size: 20px; /* Reducir el tamaño del texto en pantallas pequeñas */
+                margin: 20px;
             }
         }
     </style>
@@ -254,7 +272,14 @@
         </div>
     </nav>
 
-    <header></header>
+    <header>
+        <!-- Imagen de fondo con parallax -->
+    </header>
+
+    <!-- Texto con estilo agradable debajo de la imagen de fondo -->
+    <div class="intro-text">
+        Rodeado de la tranquilidad de la naturaleza y con un ambiente cálido y acogedor, nuestro alojamiento es el refugio perfecto para desconectar del ajetreo diario y disfrutar de un merecido descanso.
+    </div>
 
     <div class="section">
         <h2>Disponibilidad</h2>
