@@ -13,7 +13,7 @@
             --hover-color: #4682B4; /* Azul más oscuro */
             --text-color: #333;
             --background-color: #fafafa;
-            --header-height: 70vh;
+            --header-height: 80vh;
             --nav-height: 80px;
         }
 
@@ -25,27 +25,11 @@
             line-height: 1.6;
         }
 
-        header {
-            position: relative;
-            height: var(--header-height);
-            background-image: url('Tragavivos 1.JPG');
-            background-size: cover;
-            background-position: center;
-            text-align: center;
-            color: white;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
-            background-attachment: fixed;
-        }
-
         nav {
             background-color: white;
             height: var(--nav-height);
             display: flex;
-            justify-content: space-between;
+            justify-content: center;
             align-items: center;
             padding: 0 20px;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -55,13 +39,24 @@
             z-index: 1000;
         }
 
-        nav img {
-            height: 50px;
+        nav .logo {
+            display: inline-block;
+            margin-right: auto;
+        }
+
+        nav .logo img {
+            height: 80px; /* Tamaño del logo ajustado */
+            transition: transform 0.3s ease, opacity 0.3s ease;
+        }
+
+        nav .logo img:hover {
+            transform: scale(1.1); /* Efecto de zoom al pasar el ratón */
+            opacity: 0.9;
         }
 
         nav a {
             color: var(--text-color);
-            margin: 0 15px;
+            margin: 0 20px;
             text-decoration: none;
             font-size: 18px;
             text-transform: uppercase;
@@ -69,29 +64,21 @@
         }
 
         nav a:hover {
-            color: var(--hover-color); /* Sombrea solo el texto en azul más oscuro al pasar el cursor */
+            color: var(--hover-color); /* Efecto de hover sobre los enlaces */
         }
 
-        h1 {
-            font-size: 40px;
-            margin: 0;
-            background-color: rgba(0, 0, 0, 0.5);
-            padding: 10px;
-            border-radius: 10px;
-        }
-
-        p {
-            font-size: 24px;
-            background-color: rgba(0, 0, 0, 0.5);
-            padding: 10px;
-            border-radius: 10px;
-        }
-
-        #calendar {
-            max-width: 800px;
-            margin: 20px auto;
-            padding: 10px;
-            background-color: var(--background-color);
+        /* Sección con imagen de fondo */
+        header {
+            height: var(--header-height);
+            background-image: url('https://github.com/elias369369/elias369369.github.io/blob/main/Tragavivos%201.JPG?raw=true');
+            background-size: cover;
+            background-position: center 20px; /* Mueve la imagen 20px hacia abajo */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
+            position: relative;
         }
 
         .section {
@@ -103,6 +90,13 @@
         .section h2 {
             font-size: 30px;
             margin-bottom: 10px;
+        }
+
+        #calendar {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 10px;
+            background-color: var(--background-color);
         }
 
         .fc-toolbar {
@@ -124,14 +118,6 @@
 
         .fc-day-today {
             background-color: var(--main-color) !important;
-        }
-
-        .fc-header-toolbar .fc-toolbar-title {
-            text-transform: capitalize;
-        }
-
-        .fc-col-header-cell-cushion {
-            text-transform: capitalize;
         }
 
         .calculator {
@@ -190,12 +176,6 @@
         }
 
         @media (max-width: 768px) {
-            h1 {
-                font-size: 28px;
-            }
-            p {
-                font-size: 18px;
-            }
             nav a {
                 font-size: 16px;
                 margin: 0 10px;
@@ -211,7 +191,9 @@
 </head>
 <body>
     <nav>
-        <img src="LOGO GRANDE.jpg" alt="Logo de La Colmena">
+        <a href="index.html" class="logo">
+            <img src="https://raw.githubusercontent.com/elias369369/elias369369.github.io/main/LOGO%20PEQ%20BLANCO.jpg" alt="Logo de La Colmena">
+        </a>
         <div>
             <a href="alojamiento.html">Alojamiento</a>
             <a href="entorno.html">Entorno</a>
@@ -220,12 +202,7 @@
         </div>
     </nav>
 
-    <header>
-        <div>
-            <h1>Bienvenido a La Colmena</h1>
-            <p>Descubre la tranquilidad de la naturaleza en nuestro acogedor alojamiento, rodeado de montañas y belleza natural.</p>
-        </div>
-    </header>
+    <header></header>
 
     <div class="section">
         <h2>Disponibilidad</h2>
