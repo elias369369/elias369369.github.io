@@ -10,7 +10,7 @@
     <style>
         :root {
             --main-color: #f0c040;
-            --hover-color: #4682B4; /* Azul más oscuro */
+            --hover-color: #4682B4;
             --text-color: #333;
             --background-color: #fafafa;
             --header-height: 80vh;
@@ -40,22 +40,16 @@
             z-index: 1000;
         }
 
-        /* Alineación del logo a la izquierda */
-        nav .logo {
-            display: inline-block;
-        }
-
         nav .logo img {
-            height: 80px; /* Tamaño del logo ajustado */
+            height: 80px;
             transition: transform 0.3s ease, opacity 0.3s ease;
         }
 
         nav .logo img:hover {
-            transform: scale(1.1); /* Efecto de zoom al pasar el ratón */
+            transform: scale(1.1);
             opacity: 0.9;
         }
 
-        /* Alineación del menú en el centro */
         nav .nav-links {
             display: flex;
             justify-content: center;
@@ -72,14 +66,13 @@
         }
 
         nav .nav-links a:hover {
-            color: var(--hover-color); /* Efecto de hover sobre los enlaces */
+            color: var(--hover-color);
         }
 
-        /* Sección con imagen de fondo con efecto parallax */
         header {
             height: var(--header-height);
             background-image: url('https://github.com/elias369369/elias369369.github.io/blob/main/Tragavivos%201.JPG?raw=true');
-            background-attachment: fixed; /* Clave para el efecto parallax */
+            background-attachment: fixed;
             background-position: center;
             background-repeat: no-repeat;
             background-size: cover;
@@ -102,14 +95,13 @@
             margin-bottom: 10px;
         }
 
-        /* Estilos del texto agradable */
         .intro-text {
-            font-family: 'Lora', serif; /* Mantenemos la tipografía Lora */
+            font-family: 'Lora', serif;
             font-size: 24px;
             line-height: 1.8;
             margin: 40px 20px;
             text-align: center;
-            color: #444; /* Un tono gris suave */
+            color: #444;
         }
 
         #calendar {
@@ -138,6 +130,12 @@
 
         .fc-day-today {
             background-color: var(--main-color) !important;
+        }
+
+        /* Estilo para fechas ocupadas */
+        .fc-event {
+            background-color: #FF5733 !important; /* Color de eventos ocupados */
+            border: none;
         }
 
         .calculator {
@@ -184,7 +182,6 @@
             font-weight: bold;
         }
 
-        /* Estilo para mostrar precio anterior y precio con descuento */
         .result span.old-price {
             text-decoration: line-through;
             color: red;
@@ -207,36 +204,33 @@
                 font-size: 14px;
             }
 
-            /* Reducir el tamaño del header en móviles */
             header {
-                height: 50vh; /* Altura más pequeña para móviles */
-                background-attachment: scroll; /* Deshabilitar parallax en móviles */
+                height: 50vh;
+                background-attachment: scroll;
             }
 
-            /* Ajuste de calendario */
             #calendar {
                 max-width: 100%;
                 padding: 5px;
             }
 
             nav .logo img {
-                height: 60px; /* Reducimos el tamaño del logo en móviles */
+                height: 60px;
             }
 
             nav .nav-links a {
-                font-size: 14px; /* Reducimos el tamaño del texto en móviles */
+                font-size: 14px;
             }
         }
 
-        /* Para pantallas aún más pequeñas (teléfonos muy pequeños) */
         @media (max-width: 480px) {
             nav a {
-                font-size: 12px; /* Aún más pequeño en pantallas muy pequeñas */
+                font-size: 12px;
                 margin: 0 5px;
             }
 
             nav .logo img {
-                height: 50px; /* Logo más pequeño aún */
+                height: 50px;
             }
 
             .section h2 {
@@ -249,11 +243,11 @@
 
             header {
                 height: 40vh;
-                background-attachment: scroll; /* Deshabilitar parallax en pantallas pequeñas */
+                background-attachment: scroll;
             }
 
             .intro-text {
-                font-size: 20px; /* Reducir el tamaño del texto en pantallas pequeñas */
+                font-size: 20px;
                 margin: 20px;
             }
         }
@@ -276,7 +270,6 @@
         <!-- Imagen de fondo con parallax -->
     </header>
 
-    <!-- Texto con estilo agradable debajo de la imagen de fondo -->
     <div class="intro-text">
         Rodeado de la tranquilidad de la naturaleza y con un ambiente cálido y acogedor, nuestro alojamiento es el refugio perfecto para desconectar del ajetreo diario y disfrutar de un merecido descanso. Disfruta de la paz y serenidad que solo el contacto con la naturaleza puede ofrecer. 
     </div>
@@ -319,7 +312,9 @@
         <div class="result" id="result"></div>
     </div>
 
+    <!-- Bibliotecas de FullCalendar -->
     <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.4/index.global.min.js" defer></script>
+
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             var calendarEl = document.getElementById('calendar');
@@ -338,12 +333,14 @@
                     day: 'Día',
                     list: 'Agenda'
                 },
-                monthNames: ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'],
-                monthNamesShort: ['Ene', 'Feb', 'Mar', 'Abr', 'May', 'Jun', 'Jul', 'Ago', 'Sep', 'Oct', 'Nov', 'Dic'],
-                dayNames: ['Domingo', 'Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado'],
-                dayNamesShort: ['Dom', 'Lun', 'Mar', 'Mié', 'Jue', 'Vie', 'Sáb'],
-                dateClick: function(info) {
-                    alert('Fecha seleccionada: ' + info.dateStr);
+                googleCalendarApiKey: 'AIzaSyBgJJiFekNWM0tAPNmYBwedt0ouxzYQ_Mo',
+                events: {
+                    googleCalendarId: 'bGFjb2xtZW5hY29udGFjdG8xQGdtYWlsLmNvbQ'
+                },
+                eventColor: '#FF5733', // Color de eventos ocupados
+                eventClick: function(info) {
+                    info.jsEvent.preventDefault(); // Evita que el evento sea clicable
+                    alert('Fecha ocupada: ' + info.event.startStr);
                 }
             });
             calendar.render();
@@ -354,7 +351,6 @@
             var pets = parseInt(document.getElementById("pets").value);
             var crib = parseInt(document.getElementById("crib").value);
 
-            // Validación de entradas
             if (isNaN(guests) || isNaN(pets) || isNaN(crib)) {
                 document.getElementById("result").innerHTML = "Por favor, selecciona opciones válidas.";
                 return;
@@ -364,10 +360,8 @@
             var incrementedPrices = basePrices.map(price => price * 1.05);
             var totalPrice = incrementedPrices[guests - 1] + pets + crib;
 
-            // Aplicar descuento del 5%
             var discountedPrice = totalPrice * 0.95;
 
-            // Mostrar ambos precios, el original y el con descuento
             document.getElementById("result").innerHTML = `
                 <span class="old-price">${totalPrice.toFixed(2)}€</span>
                 <span class="new-price">${discountedPrice.toFixed(2)}€</span>
