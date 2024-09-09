@@ -12,7 +12,6 @@
             --hover-color: #4682B4; /* Azul más oscuro */
             --text-color: #333;
             --background-color: #fafafa;
-            --header-height: 70vh;
             --nav-height: 80px;
         }
 
@@ -25,22 +24,11 @@
             background-color: var(--background-color);
         }
 
-        header {
-            position: relative;
-            height: var(--header-height);
-            background-color: #ccc; /* Fondo gris */
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            color: white;
-        }
-
         nav {
             background-color: white;
             height: var(--nav-height);
             display: flex;
-            justify-content: space-between;
+            justify-content: center;
             align-items: center;
             padding: 0 20px;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -50,9 +38,29 @@
             z-index: 1000;
         }
 
+        nav .logo {
+            margin-right: auto;
+        }
+
+        nav .logo img {
+            height: 80px; /* Tamaño del logo ajustado */
+            transition: transform 0.3s ease, opacity 0.3s ease;
+        }
+
+        nav .logo img:hover {
+            transform: scale(1.1); /* Efecto de zoom al pasar el ratón */
+            opacity: 0.9;
+        }
+
+        nav div {
+            display: flex;
+            justify-content: center;
+            flex-grow: 1;
+        }
+
         nav a {
             color: var(--text-color);
-            margin: 0 15px;
+            margin: 0 20px;
             text-decoration: none;
             font-size: 18px;
             text-transform: uppercase;
@@ -60,20 +68,12 @@
         }
 
         nav a:hover {
-            color: var(--hover-color);
-        }
-
-        h1 {
-            font-size: 40px;
-            margin: 0;
-            padding: 10px;
-            background-color: rgba(0, 0, 0, 0.5);
-            border-radius: 10px;
+            color: var(--hover-color); /* Efecto de hover sobre los enlaces */
         }
 
         .section {
             max-width: 1000px;
-            margin: 80px auto;
+            margin: 120px auto; /* Ajustamos el margen superior para compensar la barra fija */
             padding: 20px;
             text-align: center;
         }
@@ -86,6 +86,32 @@
         .section p {
             font-size: 20px;
             line-height: 1.8;
+        }
+
+        .gallery {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-top: 40px;
+        }
+
+        .gallery img {
+            width: 300px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .gallery div {
+            text-align: center;
+        }
+
+        .gallery p {
+            margin-top: 10px;
+            font-size: 18px;
+            font-weight: bold;
         }
 
         footer {
@@ -105,9 +131,6 @@
         }
 
         @media (max-width: 768px) {
-            h1 {
-                font-size: 28px;
-            }
             nav a {
                 font-size: 16px;
                 margin: 0 10px;
@@ -120,29 +143,30 @@
 </head>
 <body>
     <nav>
+        <a href="index.html" class="logo">
+            <img src="https://raw.githubusercontent.com/elias369369/elias369369.github.io/main/LOGO%20PEQ%20BLANCO.jpg" alt="Logo de La Colmena">
+        </a>
         <div>
-            <a href="index.html">Inicio</a>
+            <a href="alojamiento.html">Alojamiento</a>
             <a href="entorno.html">Entorno</a>
             <a href="condiciones.html">Condiciones</a>
             <a href="contacto.html">Localización y Contacto</a>
         </div>
     </nav>
 
-    <header>
-        <h1>Alojamiento en La Colmena</h1>
-    </header>
-
     <div class="section">
-        <h2>Bienvenido a Nuestro Alojamiento</h2>
-        <p>
-            En La Colmena, cada rincón ha sido diseñado pensando en tu comodidad y en ofrecerte una experiencia inolvidable.
-            Rodeado de la tranquilidad de la naturaleza y con un ambiente cálido y acogedor, nuestro alojamiento es el refugio
-            perfecto para desconectar del ajetreo diario y disfrutar de un merecido descanso.
-        </p>
-        <p>
-            Nuestras habitaciones, decoradas con un estilo rústico pero elegante, te invitan a relajarte en un entorno único.
-            Disfruta de la paz y serenidad que solo el contacto con la naturaleza puede ofrecer.
-        </p>
+        <h2>Nuestras Habitaciones</h2>
+        <p>En La Colmena ofrecemos habitaciones acogedoras decoradas con un estilo rústico y moderno.</p>
+        <div class="gallery">
+            <div>
+                <img src="https://raw.githubusercontent.com/elias369369/elias369369.github.io/main/A%20Habitacion%201.jpg" alt="Habitación 1">
+                <p>Habitación 1</p>
+            </div>
+            <div>
+                <img src="https://raw.githubusercontent.com/elias369369/elias369369.github.io/main/A%20Habitacion%202.JPG" alt="Habitación 2">
+                <p>Habitación 2</p>
+            </div>
+        </div>
     </div>
 
     <footer>
