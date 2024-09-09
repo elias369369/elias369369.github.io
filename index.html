@@ -186,6 +186,46 @@
             .calculator input, .calculator select {
                 font-size: 14px;
             }
+
+            /* Reducir el tamaño del header en móviles */
+            header {
+                height: 50vh; /* Altura más pequeña para móviles */
+            }
+
+            /* Ajuste de calendario */
+            #calendar {
+                max-width: 100%;
+                padding: 5px;
+            }
+
+            /* Ajuste para el menú hamburguesa */
+            nav {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            nav .logo {
+                margin: 0 auto;
+            }
+        }
+
+        /* Para pantallas aún más pequeñas (teléfonos muy pequeños) */
+        @media (max-width: 480px) {
+            nav a {
+                font-size: 14px;
+                margin: 0 5px;
+            }
+
+            .section h2 {
+                font-size: 24px;
+            }
+
+            .calculator {
+                padding: 10px;
+            }
+
+            header {
+                height: 40vh;
+            }
         }
     </style>
 </head>
