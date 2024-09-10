@@ -25,7 +25,6 @@
             line-height: 1.6;
         }
 
-        /* Navegación */
         nav {
             background-color: white;
             height: var(--nav-height);
@@ -132,7 +131,6 @@
             background-color: var(--main-color) !important;
         }
 
-        /* Estilo para fechas ocupadas */
         .fc-event {
             background-color: #FF5733 !important; /* Color de eventos ocupados */
             border: none;
@@ -312,8 +310,9 @@
         <div class="result" id="result"></div>
     </div>
 
-    <!-- Bibliotecas de FullCalendar -->
+    <!-- Bibliotecas de FullCalendar y soporte para .ics -->
     <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.4/index.global.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/@fullcalendar/icalendar@6.1.4/index.global.min.js" defer></script>
 
     <script>
         document.addEventListener('DOMContentLoaded', function() {
@@ -333,9 +332,9 @@
                     day: 'Día',
                     list: 'Agenda'
                 },
-                googleCalendarApiKey: 'AIzaSyBgJJiFekNWM0tAPNmYBwedt0ouxzYQ_Mo',
                 events: {
-                    googleCalendarId: 'bGFjb2xtZW5hY29udGFjdG8xQGdtYWlsLmNvbQ'
+                    url: 'https://calendar.google.com/calendar/ical/sgsr8sonio3apqqfvlo7q2g68bif3u97%40import.calendar.google.com/public/basic.ics',
+                    format: 'ics'
                 },
                 eventColor: '#FF5733', // Color de eventos ocupados
                 eventClick: function(info) {
