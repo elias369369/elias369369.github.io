@@ -1,1 +1,173 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Alojamiento en La Colmena - Un refugio tranquilo rodeado de naturaleza.">
+    <title>Entorno - La Colmena</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&display=swap">
+    <style>
+        :root {
+            --main-color: #f0c040;
+            --hover-color: #4682B4;
+            --text-color: #333;
+            --background-color: #fafafa;
+            --nav-height: 80px;
+        }
+
+        body {
+            font-family: 'Lora', serif;
+            color: var(--text-color);
+            margin: 0;
+            padding: 0;
+            background-color: var(--background-color);
+            line-height: 1.6;
+        }
+
+        /* Navegación igual al primer código */
+        nav {
+            background-color: white;
+            height: var(--nav-height);
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            padding: 0 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav .logo img {
+            height: 80px;
+            margin-right: 10px;
+            transition: transform 0.3s ease, opacity 0.3s ease;
+        }
+
+        nav .logo img:hover {
+            transform: scale(1.1);
+            opacity: 0.9;
+        }
+
+        nav .nav-links {
+            display: flex;
+            justify-content: center;
+            flex-grow: 1;
+        }
+
+        nav .nav-links a {
+            color: var(--text-color);
+            margin: 0 20px;
+            text-decoration: none;
+            font-size: 18px;
+            text-transform: uppercase;
+            transition: color 0.3s ease;
+        }
+
+        nav .nav-links a:hover {
+            color: var(--hover-color);
+        }
+
+        .content {
+            padding: 20px;
+            margin: 20px 20px;
+            padding-top: var(--nav-height);
+            text-align: center;
+        }
+
+        .content h2 {
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+
+        .content p {
+            font-size: 18px;
+            margin-bottom: 40px;
+        }
+
+        .rutas {
+            margin-bottom: 40px;
+        }
+
+        .rutas h2 {
+            font-size: 28px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .rutas ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .rutas ul li {
+            font-size: 18px;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        .image {
+            width: 50%;
+            height: auto;
+            margin-bottom: 20px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: var(--background-color);
+            border-top: 1px solid #ccc;
+        }
+
+        footer p {
+            margin: 5px 0;
+        }
+
+        footer a {
+            color: var(--main-color);
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="index.html" class="logo">
+            <img src="https://raw.githubusercontent.com/elias369369/elias369369.github.io/main/LOGO%20PEQ%20BLANCO.jpg" alt="Logo de La Colmena">
+        </a>
+        <div class="nav-links">
+            <a href="alojamiento.html">Alojamiento</a>
+            <a href="entorno.html">Entorno</a>
+            <a href="condiciones.html">Condiciones</a>
+            <a href="contacto.html">Localización y Contacto</a>
+        </div>
+    </nav>
+
+    <div class="content">
+        <h2>Explora la Naturaleza que nos Rodea</h2>
+        <p>El alojamiento La Colmena está rodeado de impresionantes paisajes naturales. Aquí podrás disfrutar de paseos por las montañas, visitar ríos cristalinos y descubrir una gran variedad de fauna y flora local.</p>
+
+        <div class="rutas">
+            <h2>Rutas</h2>
+            <ul>
+                <li>Mirador de la Peña Rubia</li>
+            </ul>
+            
+            <!-- Primera imagen (sin parallax y del mismo tamaño que las demás) -->
+            <img class="image" src="https://raw.githubusercontent.com/elias369369/elias369369.github.io/main/Ca%C3%B1izares%201%20bueno.JPG" alt="Mirador de la Peña Rubia - Imagen 1">
+
+            <!-- Segunda imagen -->
+            <img class="image" src="https://github.com/elias369369/elias369369.github.io/blob/main/Ca%C3%B1izares%202.JPG?raw=true" alt="Mirador de la Peña Rubia - Imagen 2">
+
+            <!-- Tercera imagen -->
+            <img class="image" src="https://github.com/elias369369/elias369369.github.io/blob/main/Ca%C3%B1izares%203.JPG?raw=true" alt="Mirador de la Peña Rubia - Imagen 3">
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2024 La Colmena - Todos los derechos reservados</p>
+    </footer>
+</body>
+</html>
 
