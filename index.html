@@ -29,7 +29,7 @@
             background-color: white;
             height: var(--nav-height);
             display: flex;
-            justify-content: space-between;
+            justify-content: flex-start;
             align-items: center;
             padding: 0 20px;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -42,6 +42,7 @@
         nav .logo img {
             height: 80px;
             transition: transform 0.3s ease, opacity 0.3s ease;
+            margin-right: 10px;
         }
 
         nav .logo img:hover {
@@ -85,7 +86,7 @@
 
         .section {
             text-align: center;
-            margin: 20px 0;
+            margin: 10px 0; /* Disminuí el margen para reducir la distancia entre el texto y la sección de Disponibilidad */
             padding-top: var(--nav-height);
         }
 
@@ -98,9 +99,18 @@
             font-family: 'Lora', serif;
             font-size: 24px;
             line-height: 1.8;
-            margin: 40px 20px;
+            margin: 20px 20px; /* Reducí el margen inferior para disminuir la distancia con "Disponibilidad" */
             text-align: center;
             color: #444;
+        }
+
+        .calendar-container {
+            display: flex;
+            justify-content: center;
+        }
+
+        iframe {
+            border: 1px solid #777;
         }
 
         .calculator {
@@ -116,6 +126,7 @@
             display: block;
             margin: 10px 0;
             font-size: 18px;
+            text-align: center; /* Centrar el texto */
         }
 
         .calculator input, .calculator select {
@@ -135,6 +146,7 @@
             font-size: 18px;
             cursor: pointer;
             color: white;
+            margin-top: 20px;
         }
 
         .calculator button:hover {
@@ -155,6 +167,24 @@
 
         .result span.new-price {
             color: green;
+        }
+
+        .small-text {
+            font-size: 12px;
+            color: #888;
+            display: inline-block;
+            margin-left: 10px;
+        }
+
+        .label-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        .label-container span {
+            margin-left: 10px; /* Espacio a la derecha de "Número de personas" */
         }
 
         @media (max-width: 768px) {
@@ -236,13 +266,17 @@
 
     <div class="section">
         <h2>Disponibilidad</h2>
-        <!-- Nuevo código del calendario de Google aquí -->
-        <iframe src="https://calendar.google.com/calendar/embed?height=600&wkst=2&ctz=Europe%2FMadrid&bgcolor=%23ffffff&showTz=0&showCalendars=0&showTabs=0&showPrint=0&showTitle=0&src=c2dzcjhzb25pbzNhcHFxZnZsbzdxMmc2OGJpZjN1OTdAaW1wb3J0LmNhbGVuZGFyLmdvb2dsZS5jb20&color=%23D50000" style="border:solid 1px #777" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+        <div class="calendar-container">
+            <iframe src="https://calendar.google.com/calendar/embed?height=600&wkst=2&ctz=Europe%2FMadrid&bgcolor=%23ffffff&showTz=0&showCalendars=0&showTabs=0&showPrint=0&showTitle=0&src=c2dzcjhzb25pbzNhcHFxZnZsbzdxMmc2OGJpZjN1OTdAaW1wb3J0LmNhbGVuZGFyLmdvb2dsZS5jb20&color=%23D50000" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+        </div>
     </div>
 
     <div class="section calculator">
         <h2>Calculadora de Precios</h2>
-        <label for="guests">Número de personas:</label>
+        <div class="label-container">
+            <label for="guests">Número de personas</label>
+            <span class="small-text">(niños de 0 a 3 años gratis)</span>
+        </div>
         <select id="guests">
             <option value="1">1 persona</option>
             <option value="2">2 personas</option>
