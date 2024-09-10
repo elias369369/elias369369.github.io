@@ -86,7 +86,7 @@
 
         .section {
             text-align: center;
-            margin: 10px 0; /* Disminuí el margen para reducir la distancia entre el texto y la sección de Disponibilidad */
+            margin: 10px 0; 
             padding-top: var(--nav-height);
         }
 
@@ -99,7 +99,7 @@
             font-family: 'Lora', serif;
             font-size: 24px;
             line-height: 1.8;
-            margin: 20px 20px; /* Reducí el margen inferior para disminuir la distancia con "Disponibilidad" */
+            margin: 20px 20px; 
             text-align: center;
             color: #444;
         }
@@ -126,7 +126,7 @@
             display: block;
             margin: 10px 0;
             font-size: 18px;
-            text-align: center; /* Centrar el texto */
+            text-align: center;
         }
 
         .calculator input, .calculator select {
@@ -184,7 +184,23 @@
         }
 
         .label-container span {
-            margin-left: 10px; /* Espacio a la derecha de "Número de personas" */
+            margin-left: 10px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: var(--background-color);
+            border-top: 1px solid #ccc;
+        }
+
+        footer p {
+            margin: 5px 0;
+        }
+
+        footer a {
+            color: var(--main-color);
+            text-decoration: none;
         }
 
         @media (max-width: 768px) {
@@ -306,6 +322,10 @@
 
         <div class="result" id="result"></div>
     </div>
+
+    <footer>
+        <p>© 2024 La Colmena - Todos los derechos reservados</p>
+    </footer>
 
     <script>
         function calculatePrice() {
