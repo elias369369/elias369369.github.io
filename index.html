@@ -410,13 +410,13 @@
         <label for="pets">¿Trae mascotas?</label>
         <select id="pets">
             <option value="0">No</option>
-            <option value="15">Sí</option>
+            <option value="21">Sí</option>
         </select>
 
         <label for="crib">¿Necesita cuna?</label>
         <select id="crib">
             <option value="0">No</option>
-            <option value="15">Sí</option>
+            <option value="21">Sí</option>
         </select>
 
         <button onclick="calculatePrice()">Calcular Precio</button>
@@ -446,23 +446,26 @@
             var guests = parseInt(document.getElementById("guests").value);
             var pets = parseInt(document.getElementById("pets").value);
             var crib = parseInt(document.getElementById("crib").value);
-
+    
             if (isNaN(guests) || isNaN(pets) || isNaN(crib)) {
                 document.getElementById("result").innerHTML = "Por favor, selecciona opciones válidas.";
                 return;
             }
-
-            var basePrices = [200, 200, 250, 250, 290, 340, 360, 400, 430, 450];
-            var incrementedPrices = basePrices.map(price => price * 1.05);
+    
+            // Actualiza los precios base aquí
+            var basePrices = [220, 220, 270, 270, 310, 350, 380, 421, 461, 481]; // Nuevos precios
+            var incrementedPrices = basePrices.map(price => price * 1.05); // Incremento del 5%
             var totalPrice = incrementedPrices[guests - 1] + pets + crib;
-
-            var discountedPrice = totalPrice * 0.95;
-
+    
+            var discountedPrice = totalPrice * 0.95; // Descuento del 5%
+            var roundedDiscountedPrice = Math.ceil(discountedPrice); // Redondear al entero superior
+    
             document.getElementById("result").innerHTML = `
                 <span class="old-price">${totalPrice.toFixed(2)}€</span>
-                <span class="new-price">${discountedPrice.toFixed(2)}€</span>
+                <span class="new-price">${roundedDiscountedPrice}€</span>
             `;
         }
     </script>
+    
 </body>
 </html>
