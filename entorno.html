@@ -73,15 +73,15 @@
         /* Ajuste para la barra de navegación en móviles */
         @media (max-width: 768px) {
             nav {
-                height: 60px; /* Barra más grande */
+                height: 50px; /* Barra más pequeña */
             }
 
             nav .logo img {
-                height: 50px; /* Logo un poco más grande */
+                height: 40px; /* Logo más pequeño */
             }
 
             nav .nav-links a {
-                font-size: 14px; /* Texto ligeramente más grande */
+                font-size: 14px; /* Texto ligeramente más pequeño */
                 margin: 0 10px;
             }
         }
@@ -120,6 +120,10 @@
                 width: 100%; /* Las imágenes ocuparán todo el ancho de la pantalla */
                 margin-bottom: 15px;
             }
+
+            .content h2 {
+                font-size: 24px; /* Reducimos el tamaño de los títulos en móviles */
+            }
         }
 
         /* Ajuste para pantallas más pequeñas */
@@ -130,11 +134,11 @@
             }
 
             nav {
-                height: 50px; /* Barra de navegación un poco más pequeña */
+                height: 40px; /* Barra de navegación más pequeña */
             }
 
             nav .logo img {
-                height: 40px; /* Logo más pequeño */
+                height: 30px; /* Logo más pequeño */
             }
 
             nav .nav-links a {
@@ -143,8 +147,12 @@
             }
 
             footer {
-                height: 50px; /* Footer igual de alto que la barra de navegación */
+                height: 40px; /* Footer igual de alto que la barra de navegación */
                 padding: 10px;
+            }
+
+            .content h2 {
+                font-size: 22px; /* Reducimos más el tamaño de los títulos en pantallas pequeñas */
             }
         }
 
