@@ -24,7 +24,7 @@
             line-height: 1.6;
         }
 
-        /* Navegación igual al primer código */
+        /* Estilo para la barra de navegación */
         nav {
             background-color: white;
             height: var(--nav-height);
@@ -69,6 +69,23 @@
             color: var(--hover-color);
         }
 
+        /* Ajuste para la barra de navegación en pantallas pequeñas */
+        @media (max-width: 768px) {
+            nav {
+                height: 60px; /* Barra más pequeña */
+            }
+
+            nav .logo img {
+                height: 50px; /* Logo más pequeño */
+            }
+
+            nav .nav-links a {
+                font-size: 14px; /* Texto más pequeño en la navegación */
+                margin: 0 10px;
+            }
+        }
+
+        /* Ajustes generales para la página */
         .content {
             padding: 20px;
             margin: 20px 20px;
@@ -86,32 +103,40 @@
             margin-bottom: 40px;
         }
 
-        .rutas {
-            margin-bottom: 40px;
-        }
-
-        .rutas h2 {
-            font-size: 32px; /* Tamaño igual para todos los títulos */
-            text-align: center;
-            margin-bottom: 20px;
-        }
-
-        .rutas ul {
-            list-style: none;
-            padding: 0;
-        }
-
-        .rutas ul li {
-            font-size: 18px;
-            font-weight: bold;
-            text-align: center;
-            margin-bottom: 10px;
-        }
-
+        /* Ajuste para las imágenes */
         .image {
             width: 50%;
             height: auto;
             margin-bottom: 20px;
+        }
+
+        /* Ajuste para imágenes más grandes en pantallas pequeñas */
+        @media (max-width: 768px) {
+            .image {
+                width: 80%; /* Las imágenes ocuparán un 80% del ancho de la pantalla */
+                margin-bottom: 15px;
+            }
+        }
+
+        /* Ajuste para pantallas móviles (teléfonos) */
+        @media (max-width: 480px) {
+            .image {
+                width: 100%; /* En móviles, las imágenes ocuparán el 100% del ancho */
+                margin-bottom: 10px;
+            }
+
+            nav {
+                height: 50px; /* Barra de navegación más pequeña aún */
+            }
+
+            nav .logo img {
+                height: 40px; /* Logo aún más pequeño */
+            }
+
+            nav .nav-links a {
+                font-size: 12px; /* Texto más pequeño en la navegación */
+                margin: 0 5px;
+            }
         }
 
         footer {
@@ -150,7 +175,6 @@
 
         <div class="rutas">
             <h2>Mirador de la Peña Rubia</h2>
-            <!-- Imágenes del Mirador de la Peña Rubia -->
             <img class="image" src="https://raw.githubusercontent.com/elias369369/elias369369.github.io/main/Ca%C3%B1izares%201%20bueno.JPG" alt="Mirador de la Peña Rubia - Imagen 1">
             <img class="image" src="https://github.com/elias369369/elias369369.github.io/blob/main/Ca%C3%B1izares%202.JPG?raw=true" alt="Mirador de la Peña Rubia - Imagen 2">
             <img class="image" src="https://github.com/elias369369/elias369369.github.io/blob/main/Ca%C3%B1izares%203.JPG?raw=true" alt="Mirador de la Peña Rubia - Imagen 3">
@@ -158,57 +182,29 @@
 
         <div class="rutas">
             <h2>Mirador de la Hoz de Tragavivos</h2>
-            <!-- Imágenes del Mirador de la Hoz de Tragavivos -->
             <img class="image" src="https://github.com/elias369369/elias369369.github.io/blob/main/Tragavivos%201.JPG?raw=true" alt="Mirador de la Hoz de Tragavivos - Imagen 1">
             <img class="image" src="https://raw.githubusercontent.com/elias369369/elias369369.github.io/main/Tragavivos%202.JPG" alt="Mirador de la Hoz de Tragavivos - Imagen 2">
         </div>
 
         <div class="rutas">
             <h2>Ruta por la Hoz de Beteta</h2>
-            <!-- Imágenes de la Hoz de Beteta -->
             <img class="image" src="https://raw.githubusercontent.com/elias369369/elias369369.github.io/main/Beteta%201.JPG" alt="Hoz de Beteta - Imagen 1">
             <img class="image" src="https://raw.githubusercontent.com/elias369369/elias369369.github.io/main/Beteta%202.JPG" alt="Hoz de Beteta - Imagen 2">
             <img class="image" src="https://raw.githubusercontent.com/elias369369/elias369369.github.io/main/Beteta%203.JPG" alt="Hoz de Beteta - Imagen 3">
             <img class="image" src="https://github.com/elias369369/elias369369.github.io/blob/main/Beteta%204.JPG?raw=true" alt="Hoz de Beteta - Imagen 4">
             <img class="image" src="https://raw.githubusercontent.com/elias369369/elias369369.github.io/main/Beteta%205.JPG" alt="Hoz de Beteta - Imagen 5">
-            <img class="image" src="https://github.com/elias369369/elias369369.github.io/blob/main/Beteta%206.JPG?raw=true" alt="Hoz de Beteta - Imagen 6">
-            <img class="image" src="https://github.com/elias369369/elias369369.github.io/blob/main/Beteta%207.JPG?raw=true" alt="Hoz de Beteta - Imagen 7">
-            <img class="image" src="https://raw.githubusercontent.com/elias369369/elias369369.github.io/main/Beteta%208.JPG" alt="Hoz de Beteta - Imagen 8">
-            <img class="image" src="https://raw.githubusercontent.com/elias369369/elias369369.github.io/main/Beteta%209.JPG" alt="Hoz de Beteta - Imagen 9">
-            <img class="image" src="https://raw.githubusercontent.com/elias369369/elias369369.github.io/main/Beteta%2010.JPG" alt="Hoz de Beteta - Imagen 10">
-        </div>
-
-        <div class="rutas">
-            <h2>Ruta por el Nacimiento del Río Cuervo</h2>
-            <!-- Imágenes de la Ruta por el Nacimiento del Río Cuervo -->
-            <img class="image" src="https://raw.githubusercontent.com/elias369369/elias369369.github.io/main/Rio%20cuervo%201.JPG" alt="Nacimiento del Río Cuervo - Imagen 1">
-            <img class="image" src="https://github.com/elias369369/elias369369.github.io/blob/main/Rio%20cuervo%202.JPG?raw=true" alt="Nacimiento del Río Cuervo - Imagen 2">
-            <img class="image" src="https://github.com/elias369369/elias369369.github.io/blob/main/Rio%20cuervo%203.JPG?raw=true" alt="Nacimiento del Río Cuervo - Imagen 3">
-        </div>
-
-        <div class="rutas">
-            <h2>Ruta por el Embalse del Molino de Chincha (Puente de Vadillos)</h2>
-            <!-- Imágenes del Embalse del Molino de Chincha (Puente de Vadillos) -->
-            <img class="image" src="https://raw.githubusercontent.com/elias369369/elias369369.github.io/main/Vadillos%201.JPG" alt="Embalse del Molino de Chincha - Imagen 1">
-            <img class="image" src="https://raw.githubusercontent.com/elias369369/elias369369.github.io/main/Vadillos%202.JPG" alt="Embalse del Molino de Chincha - Imagen 2">
-            <img class="image" src="https://github.com/elias369369/elias369369.github.io/blob/main/Vadillos%203.JPG?raw=true" alt="Embalse del Molino de Chincha - Imagen 3">
         </div>
 
         <div class="rutas">
             <h2>Merendero de la Casa de la Pradera</h2>
-            <!-- Imágenes del Merendero de la Casa de la Pradera -->
             <img class="image" src="https://github.com/elias369369/elias369369.github.io/blob/main/Pradera%201.JPG?raw=true" alt="Merendero de la Casa de la Pradera - Imagen 1">
             <img class="image" src="https://github.com/elias369369/elias369369.github.io/blob/main/Pradera%202.JPG?raw=true" alt="Merendero de la Casa de la Pradera - Imagen 2">
-            <img class="image" src="https://github.com/elias369369/elias369369.github.io/blob/main/Pradera%203.JPG?raw=true" alt="Merendero de la Casa de la Pradera - Imagen 3">
-            <img class="image" src="https://github.com/elias369369/elias369369.github.io/blob/main/Pradera%204.JPG?raw=true" alt="Merendero de la Casa de la Pradera - Imagen 4">
         </div>
 
         <div class="rutas">
             <h2>Mirador del Alto de la Calera</h2>
-            <!-- Imágenes del Mirador del Alto de la Calera -->
             <img class="image" src="https://github.com/elias369369/elias369369.github.io/blob/main/Calera%201.JPG?raw=true" alt="Mirador del Alto de la Calera - Imagen 1">
             <img class="image" src="https://github.com/elias369369/elias369369.github.io/blob/main/Calera%202.JPG?raw=true" alt="Mirador del Alto de la Calera - Imagen 2">
-            <img class="image" src="https://github.com/elias369369/elias369369.github.io/blob/main/Calera%203.JPG?raw=true" alt="Mirador del Alto de la Calera - Imagen 3">
         </div>
     </div>
 
