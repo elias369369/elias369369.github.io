@@ -325,11 +325,18 @@
             }
         }
 
-        /* Ajuste para pantallas grandes */
+        /* Ajuste para pantallas grandes (ordenador) */
         @media (min-width: 769px) {
             .calendar-container iframe {
                 width: 800px;
                 height: 600px;
+            }
+
+            /* Mostrar (2 noches) en la misma línea en ordenadores */
+            .calculator h2::after {
+                content: " (2 noches)";
+                font-size: 30px;
+                display: inline;
             }
         }
     </style>
