@@ -29,7 +29,7 @@
             background-color: white;
             height: var(--nav-height);
             display: flex;
-            justify-content: flex-start;
+            justify-content: center;
             align-items: center;
             padding: 0 20px;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -67,6 +67,38 @@
 
         nav .nav-links a:hover {
             color: var(--hover-color);
+        }
+
+        /* Ajuste para la barra de navegación en móviles */
+        @media (max-width: 768px) {
+            nav {
+                height: 50px; /* Barra más pequeña */
+            }
+
+            nav .logo img {
+                height: 40px; /* Logo más pequeño */
+            }
+
+            nav .nav-links a {
+                font-size: 13px; /* Texto un punto más pequeño */
+                margin: 0 10px;
+            }
+        }
+
+        /* Ajuste para pantallas más pequeñas */
+        @media (max-width: 480px) {
+            nav {
+                height: 40px; /* Barra de navegación más pequeña */
+            }
+
+            nav .logo img {
+                height: 30px; /* Logo más pequeño */
+            }
+
+            nav .nav-links a {
+                font-size: 11px; /* Texto más pequeño en la navegación */
+                margin: 0 5px;
+            }
         }
 
         header {
@@ -204,10 +236,6 @@
         }
 
         @media (max-width: 768px) {
-            nav a {
-                font-size: 16px;
-                margin: 0 10px;
-            }
             .calculator {
                 padding: 15px;
             }
@@ -221,28 +249,15 @@
             }
 
             nav .logo img {
-                height: 60px;
+                height: 40px;
             }
 
             nav .nav-links a {
-                font-size: 14px;
+                font-size: 13px;
             }
         }
 
         @media (max-width: 480px) {
-            nav a {
-                font-size: 12px;
-                margin: 0 5px;
-            }
-
-            nav .logo img {
-                height: 50px;
-            }
-
-            .section h2 {
-                font-size: 24px;
-            }
-
             .calculator {
                 padding: 10px;
             }
@@ -250,6 +265,14 @@
             header {
                 height: 40vh;
                 background-attachment: scroll;
+            }
+
+            nav .logo img {
+                height: 30px;
+            }
+
+            nav .nav-links a {
+                font-size: 11px;
             }
 
             .intro-text {
