@@ -28,7 +28,7 @@
             background-color: white;
             height: var(--nav-height);
             display: flex;
-            justify-content: flex-start;
+            justify-content: center;
             align-items: center;
             padding: 0 20px;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -68,29 +68,23 @@
             color: var(--hover-color);
         }
 
-        /* Ajustes solo para móviles */
+        /* Ajustes solo para dispositivos móviles */
         @media (max-width: 768px) {
             nav {
-                height: 50px; /* Reducir altura de la barra */
-                flex-direction: column; /* Poner elementos en columna */
+                height: 50px; /* Altura de la barra más pequeña */
             }
 
             nav .logo img {
-                height: 40px; /* Reducir el tamaño del logo */
-            }
-
-            nav .nav-links {
-                flex-direction: column; /* Links en columna */
-                align-items: center;
-                margin-top: 5px;
+                height: 40px; /* Tamaño del logo más pequeño */
             }
 
             nav .nav-links a {
-                font-size: 14px; /* Reducir el tamaño de las fuentes */
-                margin: 5px 0; /* Espaciado entre los enlaces */
+                font-size: 13px; /* Texto más pequeño */
+                margin: 0 10px;
             }
         }
 
+        /* Sección principal */
         .section {
             max-width: 1200px;
             margin: 20px auto;
@@ -140,6 +134,7 @@
             padding: 20px;
             background-color: var(--background-color);
             border-top: 1px solid #ccc;
+            height: var(--nav-height);
         }
 
         footer p {
@@ -151,19 +146,15 @@
             text-decoration: none;
         }
 
-        /* Ajustes solo para móviles */
+        /* Ajustes solo para dispositivos móviles */
         @media (max-width: 768px) {
             footer {
+                height: 50px; /* Altura del footer más pequeña */
                 padding: 10px;
-                background-color: var(--hover-color); /* Cambiar el color de fondo del footer */
             }
 
             footer p {
-                font-size: 12px; /* Reducir tamaño del texto */
-            }
-
-            footer a {
-                font-size: 12px;
+                font-size: 13px;
             }
         }
 
