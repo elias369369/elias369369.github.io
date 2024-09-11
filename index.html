@@ -235,6 +235,7 @@
             text-decoration: none;
         }
 
+        /* Ajustes para móviles */
         @media (max-width: 768px) {
             .calculator {
                 padding: 15px;
@@ -258,6 +259,22 @@
         }
 
         @media (max-width: 480px) {
+            /* Disminuir distancia entre intro-text y sección de disponibilidad */
+            .intro-text {
+                font-size: 20px;
+                margin-bottom: 10px; /* Ajustamos el espacio */
+            }
+
+            .section {
+                margin: 5px 0; /* Reducimos margen para acercar las secciones */
+            }
+
+            /* Hacer el calendario cuadrado solo en móviles */
+            .calendar-container iframe {
+                width: 300px; /* Reducimos el tamaño */
+                height: 300px; /* Hacemos que sea cuadrado */
+            }
+
             .calculator {
                 padding: 10px;
             }
@@ -278,6 +295,14 @@
             .intro-text {
                 font-size: 20px;
                 margin: 20px;
+            }
+        }
+
+        /* Ajuste para pantallas grandes */
+        @media (min-width: 769px) {
+            .calendar-container iframe {
+                width: 800px;
+                height: 600px;
             }
         }
     </style>
@@ -306,7 +331,7 @@
     <div class="section">
         <h2>Disponibilidad</h2>
         <div class="calendar-container">
-            <iframe src="https://calendar.google.com/calendar/embed?height=600&wkst=2&ctz=Europe%2FMadrid&bgcolor=%23ffffff&showTz=0&showCalendars=0&showTabs=0&showPrint=0&showTitle=0&src=c2dzcjhzb25pbzNhcHFxZnZsbzdxMmc2OGJpZjN1OTdAaW1wb3J0LmNhbGVuZGFyLmdvb2dsZS5jb20&color=%23D50000" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+            <iframe src="https://calendar.google.com/calendar/embed?height=600&wkst=2&ctz=Europe%2FMadrid&bgcolor=%23ffffff&showTz=0&showCalendars=0&showTabs=0&showPrint=0&showTitle=0&src=c2dzcjhzb25pbzNhcHFxZnZsbzdxMmc2OGJpZjN1OTdAaW1wb3J0LmNhbGVuZGFyLmdvb2dsZS5jb20&color=%23D50000" frameborder="0" scrolling="no"></iframe>
         </div>
     </div>
 
