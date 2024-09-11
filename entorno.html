@@ -22,7 +22,7 @@
             padding: 0;
             background-color: var(--background-color);
             line-height: 1.6;
-            text-align: center; /* Centramos todo el texto */
+            text-align: center;
         }
 
         /* Estilo para la barra de navegación */
@@ -81,7 +81,7 @@
             }
 
             nav .nav-links a {
-                font-size: 14px; /* Texto ligeramente más pequeño */
+                font-size: 13px; /* Texto un punto más pequeño */
                 margin: 0 10px;
             }
         }
@@ -90,7 +90,7 @@
         .content {
             padding: 20px;
             margin: 20px 20px;
-            padding-top: var(--nav-height);
+            padding-top: calc(var(--nav-height) + 10px); /* Reducimos el espacio entre la barra y el contenido */
             text-align: center;
         }
 
@@ -124,6 +124,10 @@
             .content h2 {
                 font-size: 24px; /* Reducimos el tamaño de los títulos en móviles */
             }
+
+            .content {
+                padding-top: 50px; /* Ajustamos la distancia entre el contenido y la barra de navegación */
+            }
         }
 
         /* Ajuste para pantallas más pequeñas */
@@ -142,12 +146,12 @@
             }
 
             nav .nav-links a {
-                font-size: 12px; /* Texto más pequeño en la navegación */
+                font-size: 11px; /* Texto más pequeño en la navegación */
                 margin: 0 5px;
             }
 
             footer {
-                height: 40px; /* Footer igual de alto que la barra de navegación */
+                height: 40px; /* Footer del mismo tamaño que la barra de navegación */
                 padding: 10px;
             }
 
