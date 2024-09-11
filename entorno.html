@@ -86,6 +86,22 @@
             }
         }
 
+        /* Ajuste para pantallas más pequeñas */
+        @media (max-width: 480px) {
+            nav {
+                height: 40px; /* Barra de navegación más pequeña */
+            }
+
+            nav .logo img {
+                height: 30px; /* Logo más pequeño */
+            }
+
+            nav .nav-links a {
+                font-size: 11px; /* Texto más pequeño en la navegación */
+                margin: 0 5px;
+            }
+        }
+
         /* Ajustes generales para la página */
         .content {
             padding: 20px;
@@ -137,24 +153,6 @@
                 margin-bottom: 10px;
             }
 
-            nav {
-                height: 40px; /* Barra de navegación más pequeña */
-            }
-
-            nav .logo img {
-                height: 30px; /* Logo más pequeño */
-            }
-
-            nav .nav-links a {
-                font-size: 11px; /* Texto más pequeño en la navegación */
-                margin: 0 5px;
-            }
-
-            footer {
-                height: 40px; /* Footer del mismo tamaño que la barra de navegación */
-                padding: 10px;
-            }
-
             .content h2 {
                 font-size: 22px; /* Reducimos más el tamaño de los títulos en pantallas pequeñas */
             }
@@ -176,6 +174,14 @@
             color: var(--main-color);
             text-decoration: none;
         }
+
+        @media (max-width: 480px) {
+            footer {
+                height: 40px; /* Footer más pequeño en pantallas pequeñas */
+                padding: 10px;
+            }
+        }
+
     </style>
 </head>
 <body>
