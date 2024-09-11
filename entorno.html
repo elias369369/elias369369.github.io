@@ -113,7 +113,7 @@
         /* Ajuste para pantallas móviles (teléfonos) */
         @media (max-width: 768px) {
             .image {
-                width: 100%; /* Las imágenes ocuparán todo el ancho de la pantalla */
+                width: 120%; /* Las imágenes ocuparán más del ancho de la pantalla en móviles */
                 margin-bottom: 15px;
             }
         }
@@ -121,7 +121,7 @@
         /* Ajuste para pantallas más pequeñas */
         @media (max-width: 480px) {
             .image {
-                width: 100%; /* En móviles, las imágenes ocuparán el 100% del ancho */
+                width: 150%; /* En móviles pequeños, las imágenes ocuparán aún más del ancho */
                 margin-bottom: 10px;
             }
 
@@ -136,6 +136,11 @@
             nav .nav-links a {
                 font-size: 10px; /* Texto más pequeño en la navegación */
                 margin: 0 5px;
+            }
+
+            footer {
+                height: 40px; /* Footer igual de alto que la barra de navegación */
+                padding: 10px; /* Ajuste para centrado del texto en el footer */
             }
         }
 
