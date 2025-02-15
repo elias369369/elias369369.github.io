@@ -7,10 +7,10 @@
     <title>La Colmena - Alojamiento Turístico</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&display=swap">
     
-    <!-- Favicon -->
+
     <link rel="icon" href="https://raw.githubusercontent.com/elias369369/elias369369.github.io/main/LOGO%20TRANSPARENTE.png" type="image/png">
 
-    <!-- Etiqueta canónica -->
+    
     <link rel="canonical" href="https://alojamientolacolmena.es" />
     
     <style>
@@ -31,7 +31,7 @@
             line-height: 1.6;
         }
 
-        /* Navegación */
+    
         nav {
             background-color: white;
             height: var(--nav-height);
@@ -76,34 +76,34 @@
             color: var(--hover-color);
         }
 
-        /* Ajuste para la barra de navegación en móviles */
+        
         @media (max-width: 768px) {
             nav {
-                height: 50px; /* Barra más pequeña */
+                height: 50px; 
             }
 
             nav .logo img {
-                height: 40px; /* Logo más pequeño */
+                height: 40px; 
             }
 
             nav .nav-links a {
-                font-size: 13px; /* Texto un punto más pequeño */
+                font-size: 13px; 
                 margin: 0 10px;
             }
         }
 
-        /* Ajuste para pantallas más pequeñas */
+        
         @media (max-width: 480px) {
             nav {
-                height: 40px; /* Barra de navegación más pequeña */
+                height: 40px; 
             }
 
             nav .logo img {
-                height: 30px; /* Logo más pequeño */
+                height: 30px; 
             }
 
             nav .nav-links a {
-                font-size: 11px; /* Texto más pequeño en la navegación */
+                font-size: 11px; 
                 margin: 0 5px;
             }
         }
@@ -138,7 +138,7 @@
             font-family: 'Lora', serif;
             font-size: 24px;
             line-height: 1.8;
-            margin: 20px 20px 10px; /* Reducido el margen inferior */
+            margin: 20px 20px 10px; 
             text-align: center;
             color: #444;
         }
@@ -232,10 +232,10 @@
             margin-top: 30px;
             color: #444;
             text-align: center;
-            margin-bottom: 50px; /* Mayor espacio inferior */
+            margin-bottom: 50px;
         }
 
-        /* Estilos del cuadro de Google Reviews */
+      
         .google-reviews {
             text-align: center;
             margin: 40px auto;
@@ -245,7 +245,7 @@
         }
 
         .google-reviews img {
-            width: 250px; /* Ajusta el tamaño de la imagen */
+            width: 250px; 
             transition: transform 0.3s ease, opacity 0.3s ease;
         }
 
@@ -270,7 +270,7 @@
             text-decoration: none;
         }
 
-        /* Ajustes para móviles */
+        
         @media (max-width: 768px) {
             .calculator {
                 padding: 15px;
@@ -294,20 +294,20 @@
         }
 
         @media (max-width: 480px) {
-            /* Disminuir distancia entre intro-text y sección de disponibilidad */
+            
             .intro-text {
                 font-size: 20px;
-                margin-bottom: 10px; /* Ajustamos el espacio */
+                margin-bottom: 10px; 
             }
 
             .section {
-                margin: 5px 0; /* Reducimos margen para acercar las secciones */
+                margin: 5px 0; 
             }
 
-            /* Hacer el calendario cuadrado y más grande solo en móviles */
+           
             .calendar-container iframe {
-                width: 350px; /* Un poco más grande */
-                height: 350px; /* Hacemos que siga siendo cuadrado */
+                width: 350px;
+                height: 350px; 
             }
 
             .calculator {
@@ -333,10 +333,10 @@
             }
 
             .reservation-info {
-                font-size: 18px; /* Un poco más pequeña para móviles */
+                font-size: 18px; 
             }
 
-            /* Modificación solicitada: centrado y salto de línea en móviles */
+           
             .calculator h2 {
                 display: flex;
                 flex-direction: column;
@@ -351,14 +351,14 @@
             }
         }
 
-        /* Ajuste para pantallas grandes (ordenador) */
+        
         @media (min-width: 769px) {
             .calendar-container iframe {
                 width: 800px;
                 height: 600px;
             }
 
-            /* Mostrar (2 noches) en la misma línea en ordenadores */
+            
             .calculator h2::after {
                 content: " (2 noches)";
                 font-size: 30px;
@@ -381,7 +381,7 @@
     </nav>
 
     <header>
-        <!-- Imagen de fondo con parallax -->
+        
     </header>
 
     <div class="intro-text">
@@ -431,12 +431,12 @@
         <div class="result" id="result"></div>
     </div>
 
-    <!-- Texto de información de reserva -->
+    
     <div class="reservation-info">
         Si las fechas están disponibles y deseas hacer una reserva, lee el apartado de <a href="condiciones.html">condiciones</a> y luego ponte en contacto <strong>+34 626862610</strong>.
     </div>
 
-    <!-- Cuadro de Google Reviews con imagen -->
+    
     <div class="google-reviews">
         <p>¿Te has alojado con nosotros? ¡Nos encantaría conocer tu opinión!</p>
         <a href="https://www.google.co.ve/travel/hotels/entity/ChkQlq-f_b-t-vJdGg0vZy8xMXN3M3B6eGtyEAI/reviews?utm_campaign=sharing&utm_medium=link&utm_source=htls&ts=CAEaIAoCGgASGhIUCgcI6A8QCxgSEgcI6A8QCxgVGAMyAhAAKgQKABoA" target="_blank">
@@ -459,7 +459,7 @@
                 return;
             }
     
-            // Actualiza los precios base aquí
+            
             var basePrices = [220, 220, 230, 250, 290, 330, 360, 401, 421, 451]; // Nuevos precios
             var incrementedPrices = basePrices.map(price => price * 1.05); // Incremento del 5%
             var totalPrice = incrementedPrices[guests - 1] + pets + crib;
