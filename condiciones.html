@@ -3,13 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Condiciones del servicio en La Colmena.">
-    <title>Condiciones - La Colmena</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&display=swap">
-    <link rel="canonical" href="https://alojamientolacolmena.es/condiciones.html" />
+    <meta name="description" content="Condiciones de reserva, política de cancelación y normas para mascotas (perros y gatos) en Alojamiento Turístico La Colmena, casa rural en Cañizares (Serranía de Cuenca).">
+    <meta name="keywords" content="condiciones Alojamiento La Colmena, casa rural admite mascotas Cañizares, casa rural con perros Cuenca, reservas La Colmena Cañizares">
+    <meta name="robots" content="index, follow">
+    <title>Condiciones de Reserva y Normas (Mascotas) - Alojamiento La Colmena en Cañizares (Cuenca)</title>
 
+    <!-- Etiquetas Open Graph para compartir en WhatsApp y Redes Sociales -->
+    <meta property="og:title" content="Condiciones Generales y Normas - Alojamiento Turístico La Colmena (Cañizares)">
+    <meta property="og:description" content="Consulta nuestras condiciones de reserva, cancelación, estancia mínima y admisión de mascotas en nuestra casa rural en la Serranía de Cuenca.">
+    <meta property="og:image" content="https://raw.githubusercontent.com/elias369369/elias369369.github.io/main/LOGO%20PEQ%20BLANCO.jpg">
+    <meta property="og:url" content="https://www.alojamientolacolmena.es/condiciones.html">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="es_ES">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&display=swap">
     
+    <!-- Etiqueta canónica corregida con www para Google Search Console -->
+    <link rel="canonical" href="https://www.alojamientolacolmena.es/condiciones.html" />
+
+    <!-- Favicon -->
     <link rel="icon" href="https://raw.githubusercontent.com/elias369369/elias369369.github.io/main/LOGO%20TRANSPARENTE.png" type="image/png">
+
+    <!-- Datos estructurados Schema.org de Preguntas Frecuentes (FAQ) para destacar en Google -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "¿Cómo se realiza la reserva y cuál es la política de cancelación en Alojamiento La Colmena?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Para reservar se solicita un adelanto del 30% del total mediante transferencia o Bizum (+34 626862610). Si se cancela con 30 días o más de antelación al check-in, se devuelve el 100% del adelanto; entre 21 y 15 días, el 50%; y con 14 días o menos, no se devuelve el adelanto."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Se admiten mascotas en Alojamiento Turístico La Colmena en Cañizares?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sí, admitimos mascotas (perros y gatos) por un suplemento de 10 euros/día, que incluye un comedero y un colchón-cama. No se permite dejar a las mascotas solas en el alojamiento ni subirlas a las camas o al sofá."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Cuál es la estancia mínima en la casa rural La Colmena?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "La duración mínima de la estancia es de 2 noches. También disponemos de servicio de cuna por 10 euros/día y no se admiten despedidas de solteros."
+          }
+        }
+      ]
+    }
+    </script>
 
     <style>
         :root {
@@ -73,34 +120,34 @@
             color: var(--hover-color);
         }
 
-       
+        /* Ajustes para dispositivos móviles */
         @media (max-width: 768px) {
             nav {
-                height: 50px; 
+                height: 50px; /* Altura de la barra de navegación en móviles */
             }
 
             nav .logo img {
-                height: 40px; 
+                height: 40px; /* Tamaño del logo más pequeño */
             }
 
             nav .nav-links a {
-                font-size: 13px; 
+                font-size: 13px; /* Fuente más pequeña en móviles */
                 margin: 0 10px;
             }
         }
 
-        
+        /* Ajustes para pantallas pequeñas */
         @media (max-width: 480px) {
             nav {
-                height: 40px; 
+                height: 40px; /* Altura de la barra más pequeña */
             }
 
             nav .logo img {
-                height: 30px; 
+                height: 30px; /* Tamaño del logo aún más pequeño */
             }
 
             nav .nav-links a {
-                font-size: 11px; 
+                font-size: 11px; /* Texto más pequeño */
                 margin: 0 5px;
             }
         }
@@ -120,7 +167,7 @@
 
         .content p {
             font-size: 20px;
-            margin-bottom: 60px; 
+            margin-bottom: 60px; /* Más espacio entre el texto introductorio y la primera condición */
             font-weight: 400;
         }
 
@@ -131,19 +178,25 @@
         }
 
         ul + p {
-            margin-top: 40px; 
+            margin-top: 40px; /* Más espacio entre el último punto de la lista y el siguiente título */
         }
 
         li {
             font-size: 18px;
-            margin-bottom: 20px;
+            margin-bottom: 20px; /* Espacio solo entre títulos */
         }
 
         li p {
-            margin: 0; 
+            margin: 0; /* Sin margen dentro de cada condición */
         }
 
-        
+        .phone-link {
+            color: inherit;
+            text-decoration: none;
+            font-weight: 700;
+        }
+
+        /* Añadir más espacio entre el último punto de "Reservas y Cancelaciones" y el título de "Mascotas" */
         .content ul:last-of-type {
             margin-bottom: 40px;
         }
@@ -165,9 +218,12 @@
         }
 
         @media (max-width: 480px) {
+            .content h1 {
+                font-size: 28px;
+            }
             footer {
-                height: 40px;
-                padding: 10px;
+                height: auto;
+                padding: 15px 10px;
             }
         }
 
@@ -175,8 +231,8 @@
 </head>
 <body>
     <nav>
-        <a href="index.html" class="logo">
-            <img src="https://raw.githubusercontent.com/elias369369/elias369369.github.io/main/LOGO%20PEQ%20BLANCO.jpg" alt="Logo de La Colmena">
+        <a href="https://www.alojamientolacolmena.es/" class="logo" title="Inicio - Alojamiento Turístico La Colmena">
+            <img src="https://raw.githubusercontent.com/elias369369/elias369369.github.io/main/LOGO%20PEQ%20BLANCO.jpg" alt="Logo de Alojamiento Turístico La Colmena en Cañizares, Cuenca">
         </a>
         <div class="nav-links">
             <a href="alojamiento.html">Alojamiento</a>
@@ -186,13 +242,13 @@
         </div>
     </nav>
 
-    <div class="content">
-        <h1>Condiciones Generales del Alojamiento Rural</h1>
-        <p>Nuestro alojamiento rural se rige por una serie de condiciones pensadas para garantizar una estancia agradable y respetuosa con el entorno. A continuación, te detallamos las principales normas y recomendaciones para que disfrutes de tu visita al máximo.</p>
+    <main class="content">
+        <h1>Condiciones Generales del Alojamiento Rural La Colmena en Cañizares</h1>
+        <p>Nuestro alojamiento rural en <strong>Cañizares (Serranía de Cuenca)</strong> se rige por una serie de condiciones pensadas para garantizar una estancia agradable y respetuosa con el entorno. A continuación, te detallamos las principales normas y recomendaciones para que disfrutes de tu visita al máximo.</p>
 
         <ul>
             <li>
-                <p><strong>Reservas y Cancelaciones:</strong> Para reservar pedimos un adelanto del 30% total del precio de la reserva. El cliente debe puede efectuar el pago por transferencia o Bizum (+34 626862610).</p>
+                <p><strong>Reservas y Cancelaciones:</strong> Para reservar pedimos un adelanto del 30% total del precio de la reserva. El cliente puede efectuar el pago por transferencia o Bizum (<a href="tel:+34626862610" class="phone-link">+34 626862610</a>).</p>
                 <p>Si después del pago el cliente quiere cancelar la reserva, se aplicarán las siguientes condiciones según el número de días previos a la entrada:</p>
                 <ul>
                     <li>Si faltan 30 días o más hasta el día del check-in, se devolverá el 100% del adelanto.</li>
@@ -217,10 +273,10 @@
                 <p><strong>Reserva mínima de 2 noches:</strong> La duración mínima de la estancia son 2 noches. Para estancias superiores a 2 noches ponte en contacto con nosotros.</p>
             </li>
         </ul>
-    </div>
+    </main>
 
     <footer>
-        <p>© 2024 La Colmena - Todos los derechos reservados</p>
+        <p>© 2026 Alojamiento Turístico La Colmena - Casa Rural en Cañizares (Serranía de Cuenca) - Todos los derechos reservados</p>
     </footer>
 </body>
 </html>
