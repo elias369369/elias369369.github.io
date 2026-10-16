@@ -3,15 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Descubre la tranquilidad de la naturaleza en nuestro acogedor alojamiento, rodeado de montañas y belleza natural.">
-    <title>La Colmena - Alojamiento Turístico</title>
+    <meta name="description" content="Alojamiento Turístico La Colmena en Cañizares (Serranía de Cuenca). Casa rural acogedora para hasta 10 personas, ideal para desconectar en plena naturaleza. Admitimos mascotas.">
+    <meta name="keywords" content="Alojamiento La Colmena, casa rural Cañizares, alojamiento Serranía de Cuenca, apartamento turístico Cañizares, casa rural Cuenca mascotas, La Colmena Cañizares">
+    <meta name="robots" content="index, follow">
+    <title>Alojamiento Turístico La Colmena en Cañizares (Serranía de Cuenca) | Casa Rural</title>
+    
+    <!-- Etiquetas Open Graph para compartir en WhatsApp y Redes Sociales -->
+    <meta property="og:title" content="Alojamiento Turístico La Colmena en Cañizares (Cuenca)">
+    <meta property="og:description" content="Descubre la tranquilidad de la Serranía de Cuenca en nuestro acogedor alojamiento en Cañizares. Consulta disponibilidad y calcula el precio de tu estancia.">
+    <meta property="og:image" content="https://github.com/elias369369/elias369369.github.io/blob/main/Tragavivos%201.JPG?raw=true">
+    <meta property="og:url" content="https://www.alojamientolacolmena.es/">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="es_ES">
+
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&display=swap">
     
-
+    <!-- Favicon -->
     <link rel="icon" href="https://raw.githubusercontent.com/elias369369/elias369369.github.io/main/LOGO%20TRANSPARENTE.png" type="image/png">
 
-    
-    <link rel="canonical" href="https://alojamientolacolmena.es" />
+    <!-- Etiqueta canónica corregida con www para Google Search Console -->
+    <link rel="canonical" href="https://www.alojamientolacolmena.es/" />
+
+    <!-- Datos estructurados Schema.org para Posicionamiento Local en Google -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LodgingBusiness",
+      "name": "Alojamiento Turístico La Colmena",
+      "alternateName": "Casa Rural La Colmena Cañizares",
+      "description": "Alojamiento turístico y casa rural en Cañizares, en plena Serranía de Cuenca. Capacidad de hasta 10 personas, entorno natural y admisión de mascotas.",
+      "url": "https://www.alojamientolacolmena.es/",
+      "telephone": "+34626862610",
+      "image": "https://github.com/elias369369/elias369369.github.io/blob/main/Tragavivos%201.JPG?raw=true",
+      "logo": "https://raw.githubusercontent.com/elias369369/elias369369.github.io/main/LOGO%20TRANSPARENTE.png",
+      "priceRange": "€€",
+      "petsAllowed": true,
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Cañizares",
+        "addressRegion": "Cuenca",
+        "postalCode": "16891",
+        "addressCountry": "ES"
+      }
+    }
+    </script>
     
     <style>
         :root {
@@ -31,7 +66,7 @@
             line-height: 1.6;
         }
 
-    
+        /* Navegación */
         nav {
             background-color: white;
             height: var(--nav-height);
@@ -76,34 +111,34 @@
             color: var(--hover-color);
         }
 
-        
+        /* Ajuste para la barra de navegación en móviles */
         @media (max-width: 768px) {
             nav {
-                height: 50px; 
+                height: 50px; /* Barra más pequeña */
             }
 
             nav .logo img {
-                height: 40px; 
+                height: 40px; /* Logo más pequeño */
             }
 
             nav .nav-links a {
-                font-size: 13px; 
+                font-size: 13px; /* Texto un punto más pequeño */
                 margin: 0 10px;
             }
         }
 
-        
+        /* Ajuste para pantallas más pequeñas */
         @media (max-width: 480px) {
             nav {
-                height: 40px; 
+                height: 40px; /* Barra de navegación más pequeña */
             }
 
             nav .logo img {
-                height: 30px; 
+                height: 30px; /* Logo más pequeño */
             }
 
             nav .nav-links a {
-                font-size: 11px; 
+                font-size: 11px; /* Texto más pequeño en la navegación */
                 margin: 0 5px;
             }
         }
@@ -123,6 +158,15 @@
             position: relative;
         }
 
+        /* Encabezado principal H1 optimizado para SEO manteniendo la estética */
+        .main-title {
+            text-align: center;
+            font-size: 32px;
+            color: var(--text-color);
+            margin: 30px 20px 10px;
+            font-weight: 700;
+        }
+
         .section {
             text-align: center;
             margin: 10px 0; 
@@ -138,7 +182,7 @@
             font-family: 'Lora', serif;
             font-size: 24px;
             line-height: 1.8;
-            margin: 20px 20px 10px; 
+            margin: 15px 20px 10px;
             text-align: center;
             color: #444;
         }
@@ -235,7 +279,12 @@
             margin-bottom: 50px;
         }
 
-      
+        .reservation-info a.phone-link {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        /* Estilos del cuadro de Google Reviews */
         .google-reviews {
             text-align: center;
             margin: 40px auto;
@@ -245,7 +294,7 @@
         }
 
         .google-reviews img {
-            width: 250px; 
+            width: 250px;
             transition: transform 0.3s ease, opacity 0.3s ease;
         }
 
@@ -270,7 +319,7 @@
             text-decoration: none;
         }
 
-        
+        /* Ajustes para móviles */
         @media (max-width: 768px) {
             .calculator {
                 padding: 15px;
@@ -284,6 +333,10 @@
                 background-attachment: scroll;
             }
 
+            .main-title {
+                font-size: 26px;
+            }
+
             nav .logo img {
                 height: 40px;
             }
@@ -294,20 +347,25 @@
         }
 
         @media (max-width: 480px) {
-            
+            .main-title {
+                font-size: 22px;
+                margin: 20px 15px 5px;
+            }
+
+            /* Disminuir distancia entre intro-text y sección de disponibilidad */
             .intro-text {
                 font-size: 20px;
-                margin-bottom: 10px; 
+                margin: 15px 20px 10px;
             }
 
             .section {
-                margin: 5px 0; 
+                margin: 5px 0;
             }
 
-           
+            /* Hacer el calendario cuadrado y más grande solo en móviles */
             .calendar-container iframe {
                 width: 350px;
-                height: 350px; 
+                height: 350px;
             }
 
             .calculator {
@@ -327,16 +385,11 @@
                 font-size: 11px;
             }
 
-            .intro-text {
-                font-size: 20px;
-                margin: 20px;
-            }
-
             .reservation-info {
-                font-size: 18px; 
+                font-size: 18px;
             }
 
-           
+            /* Centrado y salto de línea en móviles */
             .calculator h2 {
                 display: flex;
                 flex-direction: column;
@@ -351,14 +404,14 @@
             }
         }
 
-        
+        /* Ajuste para pantallas grandes (ordenador) */
         @media (min-width: 769px) {
             .calendar-container iframe {
                 width: 800px;
                 height: 600px;
             }
 
-            
+            /* Mostrar (2 noches) en la misma línea en ordenadores */
             .calculator h2::after {
                 content: " (2 noches)";
                 font-size: 30px;
@@ -369,8 +422,8 @@
 </head>
 <body>
     <nav>
-        <a href="index.html" class="logo">
-            <img src="https://raw.githubusercontent.com/elias369369/elias369369.github.io/main/LOGO%20PEQ%20BLANCO.jpg" alt="Logo de La Colmena">
+        <a href="https://www.alojamientolacolmena.es/" class="logo" title="Inicio - Alojamiento Turístico La Colmena">
+            <img src="https://raw.githubusercontent.com/elias369369/elias369369.github.io/main/LOGO%20PEQ%20BLANCO.jpg" alt="Logo de Alojamiento Turístico La Colmena en Cañizares, Cuenca">
         </a>
         <div class="nav-links">
             <a href="alojamiento.html">Alojamiento</a>
@@ -380,72 +433,76 @@
         </div>
     </nav>
 
-    <header>
-        
+    <header role="img" aria-label="Entorno natural de Alojamiento Turístico La Colmena en Cañizares, Serranía de Cuenca">
+        <!-- Imagen de fondo con parallax -->
     </header>
 
-    <div class="intro-text">
-        Rodeado de la tranquilidad de la naturaleza y con un ambiente cálido y acogedor, nuestro alojamiento es el refugio perfecto para desconectar del ajetreo diario y disfrutar de un merecido descanso. Disfruta de la paz y serenidad que solo el contacto con la naturaleza puede ofrecer. 
-    </div>
+    <main>
+        <h1 class="main-title">Alojamiento Turístico La Colmena en Cañizares (Serranía de Cuenca)</h1>
 
-    <div class="section">
-        <h2>Disponibilidad</h2>
-        <div class="calendar-container">
-            <iframe src="https://calendar.google.com/calendar/embed?height=600&wkst=2&ctz=Europe%2FMadrid&bgcolor=%23ffffff&showTitle=0&showPrint=0&showTabs=0&showCalendars=0&showTz=0&src=bGFjb2xtZW5hY29udGFjdG8xQGdtYWlsLmNvbQ&src=c2dzcjhzb25pbzNhcHFxZnZsbzdxMmc2OGJpZjN1OTdAaW1wb3J0LmNhbGVuZGFyLmdvb2dsZS5jb20&src=bGlqNGlldWJjaDNvMHJtdHZ2ZmU3dTM3YjMxcHIyZTNAaW1wb3J0LmNhbGVuZGFyLmdvb2dsZS5jb20&color=%23039BE5&color=%23D50000&color=%23D50000" style="border:solid 1px #777" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+        <div class="intro-text">
+            Situado en <strong>Cañizares</strong>, en el corazón de la <strong>Serranía de Cuenca</strong>, y rodeado de la tranquilidad de la naturaleza, nuestro alojamiento rural es el refugio cálido y acogedor perfecto para desconectar del ajetreo diario y disfrutar de un merecido descanso en familia o con amigos. Disfruta de la paz y serenidad que solo el contacto con la naturaleza puede ofrecer.
         </div>
-    </div>
 
-    <div class="section calculator">
-        <h2>Calculadora de Precios</h2>
-        <div class="label-container">
-            <label for="guests">Número de personas</label>
-            <span class="small-text">(niños de 0 a 3 años gratis)</span>
+        <div class="section">
+            <h2>Disponibilidad</h2>
+            <div class="calendar-container">
+                <iframe title="Calendario de disponibilidad de Alojamiento La Colmena" src="https://calendar.google.com/calendar/embed?height=600&wkst=2&ctz=Europe%2FMadrid&bgcolor=%23ffffff&showTitle=0&showPrint=0&showTabs=0&showCalendars=0&showTz=0&src=bGFjb2xtZW5hY29udGFjdG8xQGdtYWlsLmNvbQ&src=c2dzcjhzb25pbzNhcHFxZnZsbzdxMmc2OGJpZjN1OTdAaW1wb3J0LmNhbGVuZGFyLmdvb2dsZS5jb20&src=bGlqNGlldWJjaDNvMHJtdHZ2ZmU3dTM3YjMxcHIyZTNAaW1wb3J0LmNhbGVuZGFyLmdvb2dsZS5jb20&color=%23039BE5&color=%23D50000&color=%23D50000" style="border:solid 1px #777" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+            </div>
         </div>
-        <select id="guests">
-            <option value="1">1 persona</option>
-            <option value="2">2 personas</option>
-            <option value="3">3 personas</option>
-            <option value="4">4 personas</option>
-            <option value="5">5 personas</option>
-            <option value="6">6 personas</option>
-            <option value="7">7 personas</option>
-            <option value="8">8 personas</option>
-            <option value="9">9 personas</option>
-            <option value="10">10 personas</option>
-        </select>
 
-        <label for="pets">¿Trae mascotas?</label>
-        <select id="pets">
-            <option value="0">No</option>
-            <option value="21">Sí</option>
-        </select>
+        <div class="section calculator">
+            <h2>Calculadora de Precios</h2>
+            <div class="label-container">
+                <label for="guests">Número de personas</label>
+                <span class="small-text">(niños de 0 a 3 años gratis)</span>
+            </div>
+            <select id="guests">
+                <option value="1">1 persona</option>
+                <option value="2">2 personas</option>
+                <option value="3">3 personas</option>
+                <option value="4">4 personas</option>
+                <option value="5">5 personas</option>
+                <option value="6">6 personas</option>
+                <option value="7">7 personas</option>
+                <option value="8">8 personas</option>
+                <option value="9">9 personas</option>
+                <option value="10">10 personas</option>
+            </select>
 
-        <label for="crib">¿Necesita cuna?</label>
-        <select id="crib">
-            <option value="0">No</option>
-            <option value="21">Sí</option>
-        </select>
+            <label for="pets">¿Trae mascotas?</label>
+            <select id="pets">
+                <option value="0">No</option>
+                <option value="21">Sí</option>
+            </select>
 
-        <button onclick="calculatePrice()">Calcular Precio</button>
+            <label for="crib">¿Necesita cuna?</label>
+            <select id="crib">
+                <option value="0">No</option>
+                <option value="21">Sí</option>
+            </select>
 
-        <div class="result" id="result"></div>
-    </div>
+            <button onclick="calculatePrice()">Calcular Precio</button>
 
-    
-    <div class="reservation-info">
-        Si las fechas están disponibles y deseas hacer una reserva, lee el apartado de <a href="condiciones.html">condiciones</a> y luego ponte en contacto <strong>+34 626862610</strong>.
-    </div>
+            <div class="result" id="result"></div>
+        </div>
 
-    
-    <div class="google-reviews">
-        <p>¿Te has alojado con nosotros? ¡Nos encantaría conocer tu opinión!</p>
-        <a href="https://www.google.co.ve/travel/hotels/entity/ChkQlq-f_b-t-vJdGg0vZy8xMXN3M3B6eGtyEAI/reviews?utm_campaign=sharing&utm_medium=link&utm_source=htls&ts=CAEaIAoCGgASGhIUCgcI6A8QCxgSEgcI6A8QCxgVGAMyAhAAKgQKABoA" target="_blank">
-            <img src="https://raw.githubusercontent.com/elias369369/elias369369.github.io/main/GOOGLE%20REVIEWS.png" alt="Google Reviews">
-        </a>
-    </div>
+        <!-- Texto de información de reserva -->
+        <div class="reservation-info">
+            Si las fechas están disponibles y deseas hacer una reserva en nuestro alojamiento en Cañizares, lee el apartado de <a href="condiciones.html">condiciones</a> y luego ponte en contacto en el <strong><a href="tel:+34626862610" class="phone-link">+34 626862610</a></strong>.
+        </div>
+
+        <!-- Cuadro de Google Reviews con imagen -->
+        <div class="google-reviews">
+            <p>¿Te has alojado con nosotros? ¡Nos encantaría conocer tu opinión!</p>
+            <a href="https://www.google.es/travel/hotels/entity/ChkQlq-f_b-t-vJdGg0vZy8xMXN3M3B6eGtyEAI/reviews?utm_campaign=sharing&utm_medium=link&utm_source=htls&ts=CAEaIAoCGgASGhIUCgcI6A8QCxgSEgcI6A8QCxgVGAMyAhAAKgQKABoA" target="_blank" rel="noopener noreferrer">
+                <img src="https://raw.githubusercontent.com/elias369369/elias369369.github.io/main/GOOGLE%20REVIEWS.png" alt="Opiniones y reseñas en Google de Alojamiento Turístico La Colmena en Cañizares">
+            </a>
+        </div>
+    </main>
 
     <footer>
-        <p>© 2024 La Colmena - Todos los derechos reservados</p>
+        <p>© 2026 Alojamiento Turístico La Colmena - Casa Rural en Cañizares (Serranía de Cuenca) - Todos los derechos reservados</p>
     </footer>
 
     <script>
@@ -459,7 +516,7 @@
                 return;
             }
     
-            
+            // Actualiza los precios base aquí
             var basePrices = [220, 220, 230, 250, 290, 330, 360, 401, 421, 451]; // Nuevos precios
             var incrementedPrices = basePrices.map(price => price * 1.05); // Incremento del 5%
             var totalPrice = incrementedPrices[guests - 1] + pets + crib;
